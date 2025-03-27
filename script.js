@@ -82,3 +82,22 @@ function toggleFavorite(button) {
   localStorage.setItem("favorites", JSON.stringify(favorites));
   displayFavorites();
 }
+// Function: Display Favorites Section
+function displayFavorites() {
+  const favoriteList = document.getElementById("favorite-list");
+  favoriteList.innerHTML = favorites.length === 0 ? "<p>No favorite songs yet.</p>" : "";
+  
+  favorites.forEach(song => {
+      const songElement = document.createElement("div");
+      songElement.classList.add("song-item");
+
+      songElement.innerHTML = `
+          <img src="https://img.youtube.com/vi/${song.videoId}/default.jpg" class="album-cover">
+          <span class="song-title">${song.songTitle}</span>
+          <button class="play-btn" data-video-id="${song.videoId}">▶</button>
+          <button class="like-btn" data-video-id="${song.videoId}">❤️</button>
+      `;
+      favoriteList.appendChild(songElement);
+  });
+  addEventListeners();
+}
