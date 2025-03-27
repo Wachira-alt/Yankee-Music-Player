@@ -122,5 +122,28 @@ body {
     max-width: 100%;
   }
 }
+/* Shuffle Button */
+.shuffle-btn {
+  background-color: #e8f0ea; 
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.shuffle-btn:hover {
+  background-color: #cedbd3;
+  transform: scale(1.05);
+}
+
+.shuffle-btn:active {
+  background-color: #e0e9e3;
+  transform: scale(0.95);
+}
+
 
 
