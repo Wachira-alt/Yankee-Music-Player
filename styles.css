@@ -111,3 +111,16 @@ body {
 }
 
 
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .playlist-container, .favorites {
+    max-width: 100%;
+  }
+}
+
+
