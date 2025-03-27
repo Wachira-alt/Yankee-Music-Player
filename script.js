@@ -101,3 +101,17 @@ function displayFavorites() {
   });
   addEventListeners();
 }
+// Function: Search Music
+async function searchMusic(query) {
+  try {
+      const response = await fetch(`https://www.googleapis.com/youtube/v3/search?part=snippet&q=${encodeURIComponent(query)}&type=video&maxResults=5&key=${YOUTUBE_API_KEY}`);
+      const data = await response.json();
+      displayTracks(data.items, "playlist", "Search Results");
+  } catch (error) {
+      console.error("Error searching songs:", error);
+  }
+}
+
+document.getElementById("search-bar").addEventListener("keypress", function(event) {
+  if (event.key === "Enter") searchMusic(this.value);
+});
