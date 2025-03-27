@@ -22,6 +22,25 @@ body {
   display: flex;
   flex-direction: column;
 }
+/* Header and Search Bar */
+header {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  width: 100%;
+}
+
+#search-bar {
+  width: 100%;
+  max-width: 600px;
+  padding: 10px;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  background-color: #282828;
+  color: white;
+  box-sizing: border-box;
+}
 
 /* Video Section */
 .video-container {
