@@ -115,3 +115,36 @@ async function searchMusic(query) {
 document.getElementById("search-bar").addEventListener("keypress", function(event) {
   if (event.key === "Enter") searchMusic(this.value);
 });
+// Function: Shuffle Songs
+function shuffleSong() {
+  const currentVideo = document.querySelector("#video-player iframe");
+  if (!currentVideo) return;
+  
+  const currentVideoId = currentVideo.src.split("/embed/")[1].split("?")[0];
+  let currentSong = null;
+  
+  document.querySelectorAll(".play-btn").forEach((btn) => {
+      if (btn.getAttribute("data-video-id") === currentVideoId) {
+          currentSong = { videoId: btn.getAttribute("data-video-id") };
+      }
+  });
+
+  if (!currentSong) return;
+  
+  const sameGenreSongs = Array.from(document.querySelectorAll(".play-btn"))
+      .map(btn => ({
+          videoId: btn.getAttribute("data-video-id")
+      }))
+      .filter(song => song.videoId !== currentSong.videoId);
+
+  if (sameGenreSongs.length === 0) return;
+  
+  const randomSong = sameGenreSongs[Math.floor(Math.random() * sameGenreSongs.length)];
+  playTrack(document.querySelector(`.play-btn[data-video-id="${randomSong.videoId}"]`));
+}
+
+shuffleBtn.addEventListener("click", shuffleSong);
+
+// Initial Load
+fetchTopTracks();
+displayFavorites();
