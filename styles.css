@@ -28,3 +28,60 @@ body {
   object-fit: cover;
 }
 
+/* Main Content Layout */
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-top: 10px;
+  flex-grow: 1;
+  overflow-y: auto;
+}
+/* Playlist */
+.playlist-container {
+  flex: 2;
+  max-width: 60%;
+}
+
+.playlist h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.song-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.song-item:hover {
+  background-color: #282828;
+}
+
+.album-cover {
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+}
+
+.song-title {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.song-duration {
+  margin-right: 10px;
+}
+
+.favorite-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+
