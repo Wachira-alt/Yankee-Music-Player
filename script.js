@@ -18,7 +18,7 @@ async function fetchTopTracks() {
       console.error("Error fetching YouTube data:", error);
   }
 }
-/ Function: Display Tracks in Playlist
+// Function: Display Tracks in Playlist
 function displayTracks(tracks, containerClass, title) {
     const playlist = document.querySelector("." + containerClass);
     playlist.innerHTML = `<h2>${title}</h2>`;
@@ -64,4 +64,21 @@ function playTrack(button) {
 
   document.querySelectorAll(".play-btn").forEach(btn => btn.innerText = "▶");
   button.innerText = "⏸";
+}
+// Function: Toggle Favorite Songs
+function toggleFavorite(button) {
+  const videoId = button.getAttribute("data-video-id");
+  const songTitle = button.getAttribute("data-title");
+  const existingIndex = favorites.findIndex(song => song.videoId === videoId);
+
+  if (existingIndex !== -1) {
+      favorites.splice(existingIndex, 1);
+      button.innerText = "🤍";
+  } else {
+      favorites.push({ videoId, songTitle });
+      button.innerText = "❤️";
+  }
+
+  localStorage.setItem("favorites", JSON.stringify(favorites));
+  displayFavorites();
 }
