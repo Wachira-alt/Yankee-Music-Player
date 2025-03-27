@@ -18,3 +18,26 @@ async function fetchTopTracks() {
       console.error("Error fetching YouTube data:", error);
   }
 }
+/ Function: Display Tracks in Playlist
+function displayTracks(tracks, containerClass, title) {
+    const playlist = document.querySelector("." + containerClass);
+    playlist.innerHTML = `<h2>${title}</h2>`;
+
+    tracks.forEach((track) => {
+        const songElement = document.createElement("div");
+        songElement.classList.add("song-item");
+        const videoId = track.id.videoId;
+        const songTitle = track.snippet.title;
+        const isFavorite = favorites.some(song => song.videoId === videoId);
+
+        songElement.innerHTML = `
+            <img src="${track.snippet.thumbnails.default.url}" class="album-cover">
+            <span class="song-title">${songTitle}</span>
+            <button class="play-btn" data-video-id="${videoId}">▶</button>
+            <button class="like-btn" data-video-id="${videoId}" data-title="${songTitle}">${isFavorite ? "❤️" : "🤍"}</button>
+        `;
+        playlist.appendChild(songElement);
+    });
+
+    addEventListeners();
+}
