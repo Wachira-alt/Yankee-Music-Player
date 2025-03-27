@@ -50,3 +50,18 @@ function addEventListeners() {
       btn.addEventListener("click", () => toggleFavorite(btn));
   });
 }
+// Function: Play Selected Track
+function playTrack(button) {
+  const videoId = button.getAttribute("data-video-id");
+  const videoContainer = document.getElementById("video-player");
+  if (!videoContainer) return console.error("Error: Video container not found!");
+  
+  videoContainer.innerHTML = `
+      <iframe width="100%" height="315" src="https://www.youtube.com/embed/${videoId}?autoplay=1" 
+          frameborder="0" allow="autoplay; encrypted-media" allowfullscreen>
+      </iframe>
+  `;
+
+  document.querySelectorAll(".play-btn").forEach(btn => btn.innerText = "▶");
+  button.innerText = "⏸";
+}
