@@ -41,3 +41,12 @@ function displayTracks(tracks, containerClass, title) {
 
     addEventListeners();
 }
+// Function: Add Event Listeners for Play and Like Buttons
+function addEventListeners() {
+  document.querySelectorAll(".play-btn").forEach(btn => {
+      btn.addEventListener("click", () => playTrack(btn));
+  });
+  document.querySelectorAll(".like-btn").forEach(btn => {
+      btn.addEventListener("click", () => toggleFavorite(btn));
+  });
+}
