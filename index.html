@@ -11,11 +11,20 @@
 <body>
   <div class="Music Player">
     <header>
+      <!-- search bar -->
       <input type="text" id="search-bar" placeholder="what do you want to play?">
+      <!-- shuffle button -->
       <button id="shuffle-btn" class="shuffle-btn">
         <i class="fa-thin fa-shuffle"></i>
       </button>
     </header>
+    <!-- video container -->
+    <div class="video-container" id="video-player">
+      <video id="music-video" controls>
+        <source src="default-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
 
   </div>
   
