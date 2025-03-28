@@ -19,10 +19,10 @@ Yankee Music Player is a sleek and responsive web music player that integrates t
 - **Frontend**: HTML, CSS, JavaScript
 - **API**: YouTube Data API
 
-## 📂 Folder Structure
+## Folder Structure
 ![Yankee Music Player UI](assets/Screenshot3.png)
 
-## 🔧 Installation & Setup
+## Installation & Setup
 
 1. Clone the repository:
 
