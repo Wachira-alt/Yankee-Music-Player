@@ -1,5 +1,5 @@
 // Global Constants & Variables
-const YOUTUBE_API_KEY = "AIzaSyAApUqOKlTZ5IdnqytyhlFBvhI11NTuXzw";
+const YOUTUBE_API_KEY = "";// add youtube api key
 const shuffleBtn = document.getElementById("shuffle-btn");
 const playerContainer = document.createElement("div");
 playerContainer.id = "player-container";
