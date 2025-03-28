@@ -45,6 +45,11 @@ Yankee Music Player is a sleek and responsive web music player that integrates t
 - Make the UI fully responsive for mobile devices.
 - Implement a custom audio player instead of embedding YouTube.
 
+## Contributing
+
+Feel free to **fork** this repository, make improvements, and submit a **pull request**
+
+
 
 
 
