@@ -9,8 +9,14 @@ Yankee Music Player is a sleek and responsive web music player that integrates t
 - **Shuffle Mode**: Randomly plays songs within the same genre.
 - **Interactive UI**: A smooth, user-friendly design with hover effects.
 
-## 📸 Screenshots
+## Screenshots
 
 ![Yankee Music Player UI](assets/Screenshot1.png)
 ![Search Feature](assets/Screenshot2.png)
+
+## Tech Stack
+
+- **Frontend**: HTML, CSS, JavaScript
+- **API**: YouTube Data API
+
 
