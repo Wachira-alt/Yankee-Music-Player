@@ -38,6 +38,14 @@ Yankee Music Player is a sleek and responsive web music player that integrates t
 - Click the ❤️ button to **add a song to favorites**.
 - Click the **shuffle button** to play a random song from the same genre.
 
+## Future Improvements
+
+- Implement user authentication for personalized playlists.
+- Add full playlist management.
+- Make the UI fully responsive for mobile devices.
+- Implement a custom audio player instead of embedding YouTube.
+
+
 
 
 
