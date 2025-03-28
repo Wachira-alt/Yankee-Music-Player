@@ -31,6 +31,15 @@ Yankee Music Player is a sleek and responsive web music player that integrates t
    cd Yankee-Music-Player
 
 
+## Usage
+
+- Click on a song to **play it**.
+- Use the **search bar** to find a song.
+- Click the ❤️ button to **add a song to favorites**.
+- Click the **shuffle button** to play a random song from the same genre.
+
+
+
 
 
 
